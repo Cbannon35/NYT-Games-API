@@ -43,4 +43,3 @@ def print_connections():
 
 if __name__ == '__main__':
     main()
-    print_connections()
