@@ -13,4 +13,4 @@ services:
     environment:
       - DEBUG=${DEBUG}
       - SECRET_KEY=${SECRET_KEY}
-      - DB_NAME=${DB_NAME}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
