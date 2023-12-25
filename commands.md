@@ -13,6 +13,12 @@ pip install selenium
 
 pip freeze > requirements.txt
 
+# Docker
+
+chmod +x docker-entrypoint.sh
+
+docker-compose up -d --build
+
 # Django
 
 django-admin startproject mysite

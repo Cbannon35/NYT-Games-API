@@ -2,3 +2,6 @@ __pycache__
 .env
 env/
 connections.html
+dv.sqlite3
+.DS_Store
+```
