@@ -9,7 +9,7 @@ nyt_connections_url = "https://www.nytimes.com/games/connections"
 driver = webdriver.Chrome()
 daily_connections = []
 
-def main():
+def fetch_connections():
     driver.get(nyt_connections_url)
     assert "Connections:" in driver.title
 
@@ -27,19 +27,19 @@ def main():
         daily_connections.append(item.text)
 
     driver.close()
+
+# if __name__ == '__main__':
+#     main()
         
-def debug(board):
-    # Print the HTML content of the 'board' element
-    print("Element HTML:", board.get_attribute('outerHTML'))
-    
-    # write driver page source
+def debug_element(elem):
+    '''Print the HTML content of the element'''
+    print("Element HTML:", elem.get_attribute('outerHTML'))
+
+def debug_page():
+    '''write driver page source to file for viewing'''
     with open('connections.html', 'w') as f:
         f.write(driver.page_source)
 
 def print_connections():
     for connection in daily_connections:
         print(connection)
-
-
-if __name__ == '__main__':
-    main()

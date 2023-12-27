@@ -1,6 +1,8 @@
 version: "3.8"
 
 services:
+  # redis:
+  #   image: redis:7.0.11-alpine
   django:
     container_name: django
     build:
@@ -14,3 +16,5 @@ services:
       - DEBUG=${DEBUG}
       - SECRET_KEY=${SECRET_KEY}
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+    # depends_on:
+    #   - redis
