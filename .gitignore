@@ -4,4 +4,5 @@ env/
 connections.html
 dv.sqlite3
 .DS_Store
+tailwindcss
 ```
